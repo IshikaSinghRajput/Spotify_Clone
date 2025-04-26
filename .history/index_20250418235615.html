@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPOTIFY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+   <aside class="sidebar">
+        <div class="logo">
+            <h2>Spotify</h2>
+        </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i>Search</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i>Library</a></li>
+                </ul>
+            </nav>
+       <div class="playlist-section">
+            <h3>Your Playlists</h3>
+            <button class="create-playlist"><i class="fas-fa-plus">Create</i></button>
+            <a href="#" class="liked-songs"><i class="fas fa-heart"></i>Liked Songs</a>
+       </div>
+   </aside>
+
+
+    <main>
+        <!--Top Bar Section-->
+        <div class="top-bar">
+            <div class="greeting">Good Morning</div> 
+            <div class="top-bar-right">
+                <input type="text" placeholder="Search music..." class="search-input">
+                <i class="fas fa-user-circle user-icon"></i>
+            </div>
+        </div>
+
+        <section>
+           <div class="main-container">
+            <div class="playlist">
+                <img src="Dark Romance.jpg" alt="Playlist Image">
+                <h3>Dark Romance</h3>
+                <p>Relax and unwind with this mellow mix.</p>
+
+                <!--Play Button Overlay-->
+                <div class="play-button">
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+
+            <div class="playlist">
+                <img src="playlist image.jpg" alt="playlist image">
+                <h3>Latest Bollywood Songs</h3>
+                <p>Enjoy latest bollywood musics</p>
+
+                <div class="play-button">
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+
+            <div class="playlist">
+                <img src="Sleep Sounds.jpg" alt="playlist image">
+                <h3>Sleep Sounds</h3>
+
+                <div class="play-button">
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+
+            </div>
+           </div>
+        </section>
+
+        <!--Popular Artists Section-->
+        <section class="popular-artists">
+            <h2>Popular Artists</h2>
+            <div class="artist-container">
+                <div class="artist">
+                    <img src="Badhsah.jpg">
+                    <p>Badshah</p>
+                </div>
+
+                <div class="artist">
+                    <img src="armanMalik.jpg">
+                    <p>Arman Malick</p>
+                </div>
+
+                <div class="artist">
+                    <img src="arijit-singh.webp">
+                    <p>Arijit Singh</p>
+                </div>
+
+                <div class="artist">
+                    <img src="Neha-Kakkar-2-1.webp">
+                    <p>Neha Kakkar</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!--Recently Played Sction-->
+        <section class="recently-played">
+            <h2>Recently Played</h2>
+            <div class="recently-played-container">
+                <!--Each song will be wrapped in a div-->
+                <div class="song">
+                    <img src="Tumse hi.jpg" alt="Song 1">
+                    <p class="song-title">Tumse Hi</p>
+                    <p class="artist">Arijit Singh</p>
+                </div>
+
+                <div class="song">
+                    <img src="Kesariya.jpg" alt="Song 2">
+                    <p class="song-title">Kesariya</p>
+                    <p class="artist">Arijit Singh</p>
+                </div>
+
+                <div class="song">
+                    <img src="pasorri.jpg" alt="Song 3">
+                    <p class="song-title">Pasoorii</p>
+                    <p class="artist">Ali Sethi</p>
+                </div>
+
+                <div class="song">
+                    <img src="Ramleela.webp" alt="Song 2">
+                    <p class="song-title">RamLeela</p>
+                    <p class="artist">Manisha Kaur</p>
+                </div>
+
+                <div class="song">
+                    <img src="Song.jpg" alt="Song 3">
+                    <p class="song-title">StarBoy</p>
+                    <p class="artist">The Weekend</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <div class="music-player">
+
+            <div class="player-left">
+                <img src="Tumse hi.jpg" alt="Song Thumbnail">
+                <div class="song-info">
+                    <h4>Tumse Hi</h4>
+                    <p>Arijit Singh</p>
+                </div>
+            </div>
+
+            <!--Centre Controls-->
+            <div class="player-center">
+                <span></span>
+               <div class="controls">
+                <button><i class="fa fa-step-backward"></i></button>
+                <button><i class="fa fa-play"></i></button>
+                <button><i class="fa fa-step-forward"></i></button>
+               </div>
+            </div>
+
+            <!--Right Volume-->
+            <div class="player-right">
+                <i class="fa fa-volume-up"></i>
+                <input type="range" min="0" max="100" value="50">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
