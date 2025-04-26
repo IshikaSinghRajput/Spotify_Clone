@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPOTIFY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-toggle" id="sidebarToggle">
+            TOGGLE
+          </div>
+          
+        <div class="sidebar-library">
+            
+          <div class="library-header">
+            <span>Your Library</span>
+            <button class="create-btn">+ Create</button>
+          </div>
+          <div class="library-toggle">
+            <button class="filter-btn active" data-filter="playlists">Playlists</button>
+            <button class="filter-btn" data-filter="artists">Artists</button>
+          </div>
+          <input type="text" id="sidebarSearch" placeholder="Search Library" />
+      
+          <ul class="library-items" id="libraryItems">
+            
+            <li class="item-playlists"> 
+                <img src="Sidebar/LikedSontgs.jpeg">
+                Liked Songs </li>
+                <br> 
+                
+            <li class="item-artists">
+                <img src="Sidebar/Side1.jpeg">
+                Harry Styles
+            </li>
+                <br> 
+
+            <li class="item-artists">
+                <img src="Sidebar/Side2.jpg">
+                Taylor Swift</li>
+                <br>
+
+            <li class="item-artists">
+                <img src="Sidebar/Side3.jpg">
+                Arijit Singh</li>
+          </ul>
+        </div>
+
+      </aside>
+      
+
+
+        <!--HEADER-->
+   <header class="spotify-header">
+
+        <div class=".left-controls">
+            <button class="icon-button">•••</button>
+        </div>
+
+        <div class="center-controls">
+            <i class="fa-solid fa-house"></i>
+                
+          
+
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="What do you want to play?">
+            </div>
+        </div>
+
+        <div class="right-controls">
+            <button class="premium-btn">Explore Premium</button>
+            <span class="icon-button bell">🔔</span>
+        </div>
+   </header>
+
+
+    <main>
+        
+        <div class="filter-bar">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Music</button>
+            <button class="filter-btn">Podcasts</button>
+          </div>
+
+        <section>
+           <div class="main-container">
+
+            <div class="playlist">
+                <img src="Playlists/Playlist1.jpg" alt="Playlist Image">
+                <h3>Dark Romance</h3>
+                <p>Relax and unwind with this mellow mix.</p>
+
+                <!--Play Button Overlay-->
+                <div class="play-button">
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+
+            <div class="playlist">
+                <img src="Playlists/Playlist2.jpg" alt="playlist image">
+                <h3>Latest Bollywood Songs</h3>
+                <p>Enjoy latest bollywood musics</p>
+
+                <div class="play-button">
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+
+            <div class="playlist">
+                <img src="Playlists/Playlist3.jpeg" alt="playlist image">
+                <h3>Holywood Disasters</h3>
+                <p>Musics that makes you float in air</p>
+
+                <div class="play-button">
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+
+            <div class="playlist">
+                <img src="Playlists/Playlist4.jpg" alt="playlist image">
+                <h3>Latest Holywood Hits</h3>
+                <p>Enjoy latest holywood musics</p>
+
+                <div class="play-button">
+                    <i class="fa fa-play"></i>
+                </div>
+            </div>
+
+
+            </div>
+           </div>
+        </section>
+
+        <!--Popular Artists Section-->
+        <section class="popular-artists">
+            <h2>Popular Artists</h2>
+            <div class="artist-container">
+                <div class="artist">
+                    <img src="Artists/Badhsah.jpg">
+                    <p>Badshah</p>
+                </div>
+
+                <div class="artist">
+                    <img src="Artists/armanMalik.jpg">
+                    <p>Arman Malick</p>
+                </div>
+
+                <div class="artist">
+                    <img src="Artists/arijit-singh.webp">
+                    <p>Arijit Singh</p>
+                </div>
+
+                <div class="artist">
+                    <img src="Artists/Neha-Kakkar-2-1.webp">
+                    <p>Neha Kakkar</p>
+                </div>
+
+                <div class="artist">
+                    <img src="Artists/BellyElishhhh.jpeg">
+                    <p>Belie Elishh</p>
+                </div>
+
+                <div class="artist">
+                    <img src="Artists/Rihanaaaaa.jpeg">
+                    <p>Rihanaa</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!--Recently Played Sction-->
+        <section class="recently-played">
+            <h2>Recently Played</h2>
+            <div class="recently-played-container">
+                
+                <div class="song" data-title="Tumse Hi"  data-artist="Arijit Singh"  data-src="Audio\TumseHi.mp3" data-image="RecentSection/Song1.jpg">
+                    <img src="RecentSection/Song1.jpg" alt="Song 1">
+                    <p class="song-title">Tumse Hi</p>
+                    <p class="artists">Arijit Singh</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+                <div class="song" data-title="Kesariya"  data-artist="Arijit Singh" data-src="Audio\Kesariya.mp3" data-image="RecentSection/Song2.jpg">
+                    <img src="RecentSection/Song2.jpg" alt="Song 2">
+                    <p class="song-title">Kesariya</p>
+                    <p class="artists">Arijit Singh</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+                <div class="song" data-title="Pasoori"  data-artist="Ali Sethi" data-src="Audio\Pasoori.mp3" data-image="RecentSection/Song3.jpg">
+                    <img src="RecentSection/Song3.jpg" alt="Song 3">
+                    <p class="song-title">Pasoorii</p>
+                    <p class="artists">Ali Sethi</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+                <div class="song" data-title="StarBoy"  data-artist="The Weekend" data-src="Audio\StarBoy.mp3" data-image="RecentSection/Song4.jpeg">
+                    <img src="RecentSection/Song4.jpeg" alt="Song 2">
+                    <p class="song-title">StarBoy</p>
+                    <p class="artists">The Weekend</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+                <div class="song" data-title="Ranjhana"  data-artist="Arijit Singh" data-src="Raanjhanaa Raanjhanaa-(Mr-Jat.in).mp3" data-image="RecentSection/Song5.jpeg" >
+                    <img src="RecentSection/Song5.jpeg" alt="Song 3">
+                    <p class="song-title">Ranjhana</p>
+                    <p class="artists">Arijit Singh</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+                <div class="song" data-title="Lambiya Judaiya"  data-artist="Arijit Singh" data-src="songs/Lambiya Judaiya.mp3" data-image="RecentSection/Song6.jpeg">
+                    <img src="RecentSection/Song6.jpeg" alt="Song 3">
+                    <p class="song-title">Lambiya Judaiya</p>
+                    <p class="artists">Arijit Singh</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+                <div class="song" data-title="Ramleela"  data-artist="Arijit Singh" data-src="Ramleela.mp3" data-image="RecentSection/Song7.webp">
+                    <img src="RecentSection/Song7.webp" alt="Song 3">
+                    <p class="song-title">Ramleela</p>
+                    <p class="artists">Manisha Kaur</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--Trending Song Sction-->
+        <section class="trending-songs">
+            <h2>Trending Songs</h2>
+            <div class="trending-songs-container">
+               
+                <div class="song" data-title="Pathan"  data-artist="Arijit Singh"  data-src="Jhoome Jo Pathaan - SirfJatt.Com.mp3" data-image="TrendingSection/Trending1.jpeg" >
+                    <img src="TrendingSection/Trending1.jpeg" alt="Song 1">
+                    <p class="song-title">Pathan</p>
+                    <p class="artists">Arijit Singh</p>
+                    <div class="play-overlay"><i class="fa fa-play" ></i></div>
+                </div>
+
+                <div class="song" data-title="Mastani"  data-artist="Manisha Kaur" data-src="Audio\Mastani.mp3" data-image="TrendingSection/trending2.webp">
+                    <img src="TrendingSection/trending2.webp" alt="Song 2">
+                    <p class="song-title">Mastani</p>
+                    <p class="artists">Manisha Kaur</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+                <div class="song" data-title="Param Sundri"  data-artist="Shreya Ghosal" data-src="Audio\Param.mp3" data-image="TrendingSection/trending4.jpeg">
+                    <img src="TrendingSection/trending4.jpeg" alt="Song 3">
+                    <p class="song-title">Param Sundri</p>
+                    <p class="artists">Shreya Ghosal</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+                <div class="song" data-title="Perfect"  data-artist="Ed Sheerin" data-src="Audio\Perfect.mp3" data-image="TrendingSection/trending5.jpeg">
+                    <img src="TrendingSection/trending5.jpeg" alt="Song 2">
+                    <p class="song-title">Perfect</p>
+                    <p class="artists">Ed Sheerin</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+                <div class="song" data-title="We dont talk anymore"  data-artist="Charlie Path" data-src="We Dont Talk Anymore - PagalWorld.mp3" data-image="TrendingSection/trending6.jpeg" >
+                    <img src="TrendingSection/trending6.jpeg" alt="Song 3">
+                    <p class="song-title">We Don't talk anymore</p>
+                    <p class="artists">Charlie Path</p>
+                   
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+                <div class="song" data-title="Cradles"  data-artist="MC Martin" data-src="Sub_Urban_-_Cradles_CeeNaija.com_.mp3" data-image="TrendingSection/trending7.jpeg" >
+                    <img src="TrendingSection/trending7.jpeg" alt="Song 3">
+                    <p class="song-title">Cradles</p>
+                    <p class="artists">MC Martin</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+                <div class="song" data-title="Playdate"  data-artist="Melenie" data-src="Audio\Playdate.mp3" data-image="TrendingSection/trending8.jpeg">
+                    <img src="TrendingSection/trending8.jpeg" alt="Song 3">
+                    <p class="song-title">Playdate</p>
+                    <p class="artists">Malenie</p>
+                    <div class="play-overlay"><i class="fa fa-play"></i></div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!--FOOTER-->
+
+    <footer>
+        <audio id="audio-player" src="" preload="metadata"></audio>
+        <div class="music-player">
+
+            <div class="player-left">
+                <img src="Song1.jpg" alt="Song Thumbnail">
+                <div class="song-info">
+                    <h4>Tumse Hi</h4>
+                    <p>Arijit Singh</p>
+                </div>
+            </div>
+
+            <!--Centre Controls-->
+            <div class="player-center">
+                <!-- <span></span> -->
+               <div class="controls">
+                <i id="shuffle-btn" class="fas fa-random"></i>
+                <i class="fa fa-step-backward"></i>
+                <i class="fa fa-play" id="play-pause-btn"></i>
+               <i class="fa fa-step-forward"></i>
+               <i class="fas fa-redo" id="repeat-btn" title="Repeat"></i>
+
+               </div>
+            
+            <!--Progress Bar-->
+               <div class="progress-container" id="progress-container">
+                <span class="current-time" id="current-time">0.00</span>
+                <input type="range" class="progress-bar" id="progress-bar" value="0" min="0" max="100">
+                <span class="total-duration" id="total-duration">0.00</span>
+               </div>
+            </div>
+
+            
+            <!--Right Volume-->
+            <div class="player-right">
+                <i class="fa fa-volume-up"></i>
+                <input type="range" min="0" max="100" value="50"  class="volume-slider">
+            </div>
+          
+        </div>
+    </footer>
+
+    <audio id="audioPlayer"></audio>
+
+
+    
+    <script src="app.js"></script>
+</body>
+</html>

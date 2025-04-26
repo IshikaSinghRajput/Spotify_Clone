@@ -55,15 +55,26 @@ nav ul li a:hover {
     color: white;
     position: sticky;
     top: 0;
-    z-index: 100;
+    
 }
 
-.left-controls,
+
 .center-controls,
 .right-controls{
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+.logo{
+    font-size: 40px; /* Adjust the size as needed */
+    font-weight: bold;
+    color: #1DB954; /* Spotify Green */
+    transition: text-shadow 0.3s ease;
+}
+
+.logo:hover {
+    text-shadow: 0 0 15px rgba(29, 185, 84, 0.8), 0 0 30px rgba(29, 185, 84, 0.6), 0 0 45px rgba(29, 185, 84, 0.4);
 }
 
 .icon-button{
@@ -74,9 +85,14 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.home-button img{
-    width: 30px;
-    height: 30px;
+.center-controls i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    background-color: #555;
     border-radius: 50%;
     padding: 5px;
 }
@@ -100,6 +116,19 @@ nav ul li a:hover {
     outline: none;
     width: 100%;
     margin: 0 10px;
+}
+
+.right-controls i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    background-color: #555;
+    color: #1DB954;
+    border-radius: 50%;
+    padding: 5px;
 }
 
 .premium-btn{
@@ -130,11 +159,21 @@ main{
    
 }
 
+.main-container{
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px;
+    padding: 40px;
+}
+
+
 .filter-bar {
     display: flex;
     gap: 10px;
     padding: 20px 30px 10px 30px;
-    margin-bottom: 2pxpx;
+    margin-bottom: 5px;
+    margin-left: 20px;
   }
   
   .filter-btn {
@@ -214,12 +253,12 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 70px;
-    background-color: #111;
+    height: 90px;
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 0px 0px; */
+
     color: white;
     z-index: 100;
 }
@@ -232,20 +271,20 @@ footer{
 }
 
 .player-left img{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 8px;
     object-fit: cover;
-    /* margin-right: 10px; */
+   
 }
 
 .song-info h4{
-    font-size: 14px;
+    font-size: 18px;
    font-weight: bold;
 }
 
 .song-info p{
-    font-size: 12px;
+    font-size: 14px;
     color: #aaa;
    
 }
@@ -274,6 +313,10 @@ footer{
     font-size: 14px;
     cursor: pointer;
     transition: color 0.3s ease;
+}
+
+.controls i{
+    font-size: 23px;
 }
 
 .player-center i:hover{
@@ -324,8 +367,8 @@ footer{
 
 .progress-bar::-webkit-slider-thumb{
     appearance: none;
-    height: 12px;
-    width: 12px;
+    height: 16px;
+    width: 16px;
     border-radius: 50%;
     background: white;
     border: none;
@@ -333,26 +376,13 @@ footer{
 }
 
 .current-time, .total-duration{
-    font-size: 12px;
+    font-size: 15px;
     color: #ccc;
 }
 
 /*<---------------------------------------------------------------->*/
 
 /*Styling The Sidebar Menu*/
-.sidebar{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 100vh;
-    background: #000;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
 
 .nav-links a{
     display: flex;
@@ -393,12 +423,6 @@ footer{
     margin-right: 10px;
 }
 
-.main-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamic grid */
-    gap: 15px; /* Spacing between items */
-    padding: 40px;
-}
 
 /*Ensuiring all playlists look uniform*/
 .playlist {
@@ -417,71 +441,37 @@ footer{
 /*Top Bar Styling*/
 
 .sidebar {
-    width: 240px;
+    position: fixed;
+    width: 250px;
+    left: 0;
+    top: 0;
+    padding: 20px;
     background-color: #121212;
     color: white;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     height: 100vh;
     overflow-y: auto;
-    transition: width 0.3s ease;
     font-size: x-large;
     font-weight: bold;
+    border-right: 16px solid black;
   }
 
-  /* Collapsed sidebar */
-.sidebar.collapsed {
-    width: 72px;
-  }
-
-  /* Toggle button */
-  .sidebar-toggle {
-    cursor: pointer;
-    font-size: 24px;
-    padding: 12px;
-    text-align: right;
-    color: white;
-    background-color: #121212; /* Match sidebar background */
-    border-bottom: 1px solid #282828;
-  }
-  
-
-  /* Example for hiding text when collapsed */
-.sidebar.collapsed .menu-text {
-    display: none;
-  }
-  
-  .sidebar-top .nav-btn {
-    background: none;
-    border: none;
-    color: #b3b3b3;
-    padding: 10px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-  }
-  
-  .sidebar-top .nav-btn.active {
-    color: white;
-    font-weight: bold;
-  }
-  
+ 
   .sidebar-library {
     margin-top: 40px;
     flex-grow: 1;
   }
   
-  .library-header, 
-  .create-btn{
+  .library-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+    margin-top: 60px;
     border-radius: 20px;
+  
   }
   
   .create-btn {
@@ -489,7 +479,9 @@ footer{
     color: white;
     border: none;
     padding: 5px 10px;
-    font-size: medium;
+    font-size: 16px;
+    border-radius: 999px;
+    font-weight: bold;
     cursor: pointer;
   }
   
@@ -508,11 +500,7 @@ footer{
     cursor: pointer;
     font-size: 14px;
   }
-  
-  .filter-btn.active {
-    background-color: white;
-    color: black;
-  }
+
   
   #sidebarSearch {
     width: 100%;
@@ -531,20 +519,36 @@ footer{
     overflow-y: auto;
     max-height: 500px;
     font-size: medium;
+    cursor: pointer;
   }
- 
 
- .item-playlists img{
-    height: 30px;
-    width: 30px;
-    border-radius: 5px;
- }
 
- .item-artists img{
-    height: 50px;
-    width: 50px;
+  .side_artist {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .side_artist img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
     border-radius: 50%;
- }
+  }
+  
+  .info h4 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .info p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #b3b3b3;
+  }
+
 
   .library-items .item {
     padding: 8px;
@@ -553,9 +557,54 @@ footer{
     transition: background 0.2s;
     font-size: large;
   }
-  
+
   .library-items .item:hover {
     background-color: #282828;
+  }
+
+  /*Liked Songs*/
+  
+.liked-songs-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .icon img {
+    width: 50px;
+    height: 50px; 
+    border-radius: 5px;
+  }
+  
+  .text-content h3 {
+    margin: 0;
+    color: #1DB954; 
+    font-size: 18px;
+  }
+  
+  .text-content p {
+    margin: 5px 0 0;
+    color: #b3b3b3; 
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+ .text-content i {
+    width: 14px;
+    height: 14px;
+    color: #1db954;
   }
 
   
@@ -587,21 +636,25 @@ footer{
 /*<---------------------------------------------------------------->*/
 
 /*Recently Played Section*/
-.recently-played,
+
 .trending-songs{
     margin-top: 20px;
+    margin-left: 20px;
     padding: 15px;
     padding-left: 25px;
-    background-color: #121212;
+    background-color: #181818;
     border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .recently-played {
+    margin-top: 20px;
+    margin-left: 20px;
     padding-left: 35px;
     color: white;
     font-size: 22px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 
 
@@ -610,7 +663,6 @@ footer{
 .trending-songs-container{
     display: flex;
     gap: 15px;
-    overflow-x: auto;  /*Enables Horizontal scrolling*/
     padding-bottom: 10px;
     
 }
@@ -625,7 +677,7 @@ footer{
 }
 
 .song{
-    background: #181818;
+    background: #121212;
     border-radius: 10px;
     padding: 10px;
     min-width: 120px;
@@ -682,7 +734,8 @@ footer{
 }
 
 .popular-artists{
-    margin-top: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
    
 }
 
@@ -696,6 +749,7 @@ footer{
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 15px;
+    margin-left: 15px;
     padding-left: 25px;
 }
 
