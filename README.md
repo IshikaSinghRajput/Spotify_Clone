@@ -7,10 +7,7 @@
 - Audio playback
 - Real-time progress bar & timestamps
 
-## Next Phase
-- Backend integration
-- Auth & playlists
-- Full-stack system design
+Watch Live Demo :- https://spotifyclonebyishika.netlify.app/
 
 ## Developer
 Ishika Singh Rajput
