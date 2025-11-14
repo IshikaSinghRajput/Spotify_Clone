@@ -7,7 +7,7 @@
 - Audio playback
 - Real-time progress bar & timestamps
 
-Watch Live Demo :- https://spotifyclonebyishika.netlify.app/
+Watch Live Demo :- https://spotifybyishika.netlify.app/
 
 ## Developer
 Ishika Singh Rajput
